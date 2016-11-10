@@ -14,7 +14,7 @@
       width: 60em;
       height: 20em;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      font-size: 8pt;
+      font-size: 10pt;
       padding: 3pt;
     }
     
@@ -52,6 +52,9 @@
       height: 1px;
       background-color: #EEE;
     }
+    .heightlight{
+      color: palevioletred;
+    }
   </style>
   <script>
     var phrases = []
@@ -70,7 +73,7 @@
     });
     
     $(document).ready(function() {
-                console.log("start");
+                //console.log("start");
                 $("#check-to-text").click(function() {
                     var l = $("#container input:checked").map(function() {
                         return this.value
@@ -82,6 +85,7 @@
                 $("#to-report").click(function(){
                   var r = option[$("#search-text").val()]
                   console.log($("#search-text").text())
+                  r = r.replace(/\*/gm,'_____')
                   $("#report-preview").val(r)
                 })
                 
@@ -106,7 +110,7 @@
                     source: function(request, response) {
                         target = request.term
                         target = target.trim().toUpperCase();
-                        var l = target.split(/[\s,.]+/ig);
+                        var l = target.split(/[\s,\.]+/ig);
                         var result = option_keys.filter(function(x) {
                             return l.every(function(y) {
                                 return x.search(y) != -1;
@@ -118,10 +122,10 @@
                     },
                     autofocus: true,
                 });
-
+                // format report to within 60 charater per line
                 $("#format").click(function(){
                       var textarea = $("textarea");
-                      var text = textarea.val();
+                      var text = textarea.val()
                       var header_loc = text.search(/:/gm);
                       // header  = `imrpression :`
                       var header = text.substr(0,header_loc+1);
@@ -129,12 +133,17 @@
                       var remain = text.substr(header_loc+2)
                       var rex = /\n/gm;
                       var x = remain.trim().search(/impression:/igm);
-                      var a = remain.substr(0,x);
+                      if (x != -1 ){var a = remain.substr(0,x);} else {var a = remain;}
                       var m = a.replace(rex,' ');
                       m = m.replace(/(.{3,60})\b/gm,'$1\n');
                       m = m.replace(/^\s+/gm ,'');
                       textarea.val(header+ m + "\n" + remain.substr(x));
                       console.log(header);
+                });
+
+                $('#report-preview').bind('input propertychange', function() {
+                    var new_text = $('#report-preview').val().replace(/\*/gm, '<span class="heightlight">*</span>')
+                    //$('#result p').html(new_text);
                 });
     });
  </script>
@@ -151,6 +160,7 @@
   </div>
   <div id="result">
     <textarea id="report-preview"></textarea>
+    <p></p>
   </div>
   <div id="container">
     <div id="organ" name="header">

@@ -17,11 +17,11 @@
       font-size: 10pt;
       padding: 3pt;
     }
-    
+
     #container {
       padding: 2pt;
     }
-    
+
     #container>div {
       display: inline-block;
       border: 1pt solid #DDD;
@@ -33,11 +33,11 @@
       font-family: Arial, Helvetica, sans-serif;
       color: #333;
     }
-    
+
     #container>* {
       color: #666;
     }
-    
+
     #container>div h3 {
       display: block;
       font-size: 10pt;
@@ -46,7 +46,7 @@
       font-family: Courier New, Courier, monospace;
       color: #111;
     }
-    
+
     hr {
       border: 0;
       height: 1px;
@@ -71,7 +71,7 @@
         });
         console.log(option_keys)
     });
-    
+
     $(document).ready(function() {
                 //console.log("start");
                 $("#check-to-text").click(function() {
@@ -88,7 +88,7 @@
                   r = r.replace(/\*/gm,'_____')
                   $("#report-preview").val(r)
                 })
-                
+
                 $("#clear-button").click(function(){
                   $("#container input:checkbox:checked").prop("checked",false);
                   console.log($("#container input:checkbox"))
@@ -117,7 +117,7 @@
                             });
                         });
                         result = result.sort(function(m,n){return m.length - n.length});
-                        console.log(result)
+                        console.log(result);
                         response(result.splice(0,10));
                     },
                     autofocus: true,
@@ -246,7 +246,7 @@
 <label><input type="checkbox" value="PE" name="PE" organ="">PE:<span>pleural effusion</span><br>
 <label><input type="checkbox" value="PC" name="PC" organ="">PC:<span>pericardial effusion</span><br>
 
-    </div>    
+    </div>
     </div>
   </body>
 </html>

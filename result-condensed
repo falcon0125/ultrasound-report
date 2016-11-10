@@ -1,0 +1,191 @@
+// <categroy> 
+// `code`
+// description ... {?A|B|C} 單選  {+*A|B|C} 複選, * 預設
+// {int(8,10)}
+
+
+<header> 0
+Sonography of the abdomen was performed and showed:
+
+
+<condition> 1
+poor cooperation
+poor window
+
+<liver parenchyma> 2
+  #normal
+    short: NL
+    des:
+      The liver parenchyma shows reflective pattern with increased sound attenuation without evidence of focal lesion.
+    imp:
+ #fatty liver
+    short: FL
+    des:
+      The liver parenchyma shows reflective pattern with increased sound attenuation.
+    imp:
+      Fatty liver.
+  #fatty liver with focal sparing
+    short: FLFS
+    des: 
+      The liver parenchyma shows reflective pattern with increased sound attenuation and a relative hypoechoic area over the * lobe.
+    imp:
+      A relative hypoechoic area about * mm in size is noted over the * lobe of liver.
+      Focal fat-sparing area is considered.
+    
+  #coarse liver
+    short : LD
+    des:
+      The liver shows dense echopattern of the parenchyma with a cystic lesion about cm in diameter over segment of love liver.
+    imp:
+      Dense echopattern of the liver parenchyma, which might be due to corrhosis of the liver, fatty infiltration or chronic hepatitis.
+  #Liver cirhosis + splenomegaly
+      short: SCI
+      des:
+        The liver parenchyma shows coarsening of the echopattern with increased sound attenuations.
+        The spleen shows enlargement.
+      imp:
+        Coarsening of the echopattern of liver with splenomegaly are compatible with cirrhosis of liver.
+  #liver cirrhosis + splenomegaly + splenic vein enlargement(>14mm)
+      des:
+        Coarsening of the echopattern of liver parenchyma with engorgement of splenic vein, splenomegaly and ascites are compatible with cirrhosis of liver.
+        The spleen shows enlargement engorgement of splenic vein.
+      imp:
+        The liver shows coarsening of the echopattern with enlargement without evidence of focal mass lesion.
+
+
+
+
+<liver operation>
+  #liver calcification
+      code: CA
+      des:
+        The liver parenchyma shows homogeneous echogenicity without evidence of focal mass lesion but a calcification over right lobe.
+      imp:
+        A calcification about * mm over right lobe of liver.
+<liver nodule> 3
+
+  #liver calcification
+      code: CA
+      des:
+        The liver parenchyma shows homogeneous echogenicity without evidence of focal mass lesion but a calcification over right lobe.
+      imp:
+        A calcification about * mm over right lobe of liver.
+  #hypoechoic nodule(<1cm 時)
+      code: HP
+      des:
+        The liver parenchyma shows homogeneous echogenicity but a hypoechoic nodule over left lobe.
+ 
+      imp:
+        A hypoechoic nodule about * mm in size is noted over left lobe of liver.
+ Suggest close follow up.
+
+  #hypoechoic nodule suggest CT	(>1cm 時)
+      short: HPC
+      des: 
+        A hypoechoic nodule over * lobe and calcifications over * lobe.
+      imp:
+        A hypoechoic nodule about * mm in size is noted over * lobe of liver.
+ Suggest close follow up.
+
+   #hyperechoic nodule
+      short: HPE    
+      des: 
+        A hyperechoic nodules over * lobe.
+      imp:
+        A hyperechoic nodule about * mm in size is noted over * lobe of liver.
+        Suggest follow up.
+       
+
+   #Liver cyst
+      short: LC 
+      des: 
+        A liver cyst about * mm in size over * lobe.
+      imp:
+        A liver cyst about * mm in size over * lobe.
+   
+   #multiple liver cysts
+      short: LCS
+      des: 
+        Multiple liver cysts about * mm in size over * lobe.
+      imp:
+        Multiple liver cysts about * mm in size over * lobe.
+ 
+ #hemangioma
+      short: 
+        HE     
+      des: 
+        A hyperechoic nodule over * lobe.
+      imp:
+        A hyperechoic nodule about * mm in size over right lobe of liver is compatible with hemangioma.
+
+  #atypical hemangioma
+      short: 
+        AHE     
+      des: 
+        a hypoechoic nodule with hyperechoic rim over * lobe.
+      imp:
+        A hypoechoic nodule with hyperechoic rim about * mm in size is noted over * lobe of liver.
+        Atypical hemangioma is first considered.
+        Suggest close follow up.
+
+
+<GB>2
+#normal
+  short:      
+  des: 
+        The gall bladder is normal in size without evidence of stones.
+  imp:
+
+#normal
+  short:      
+  des: 
+        The gall bladder is normal in size without evidence of stones.
+  imp:
+
+#gbstone
+Multiple gall stones in the gallbladder.
+#polyps
+Multiple polyps in the gallbladder.
+
+S/P cholecystectomy. 
+
+<billary> 3
+#normal
+The biliary tree is normal appearance without dilatation
+
+
+
+<pancreas>4
+#normal
+  The partial pancreas is non-visualization due to bowel gas
+#pancreatic cyst
+  description:
+  The pancreatic duct shows dilatation.
+  impression:
+  Dilatation of pancreatic duct about * mm in caliber.
+#
+<spleen>5
+#noraml
+The spleen is normal appearance without enlargement
+
+<Kidney> 6
+#normal
+The bilateral kidneys are normal configuration without hydronephrosis
+
+Mild hydronephrosis of right kidney
+
+A hyperechoic nodule about 17 mm is noted over * pole of * kidney. Harmatoma is considered.
+
+Renal cyst,   cm in diameter over   pole of
+
+A hyperechoic nodule about * mm in size are noted over 
+  * pole of * kidney. Angiomyolipoma is considered.
+
+
+<etc> 7
+small amount of ascite in pelvis
+pleural effusion
+pericardial effusion
+
+<footer>
+Otherwise, no significant abnormal findings

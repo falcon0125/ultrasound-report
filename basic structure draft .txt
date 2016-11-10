@@ -1,0 +1,82 @@
+Organ
+    Liver
+        Liver cyst
+        Liver abscess
+        Hepatic hemangioma
+        Liver tumor
+            Liver tumor
+            Hepatocellular carcinoma(HCC)
+            Focal nodular hyperplasia(FNH)
+            Adenoma
+            Metastatic liver tumor
+        Fatty liver
+        Hepatitis
+        Liver cirrhosis
+        Portal hypertension
+        Congestive liver
+        Intrahepatic calcification
+    Gallbladder
+        biliary sludge
+        gallbladder stone
+        acute cholecystitis
+        chronic cholecystitis
+        adenomyomatosis
+        polypoid lesion
+            """follow up if < 1cm"""
+        gallbladder carcinoma
+    BiliaryTree
+        congenital bile duct dilation
+        choledocholithiasis
+        pneumobilia
+        IHD dilation
+        Bile duct carcinoma
+        Mirizzi syndrome
+    Pancrea
+        acute pancreatitis
+        chronic pancreatitis
+        insulinoma
+        pseudocyst
+        Pancreatic carcinoma
+    Spleen
+        splenomegaly
+            """>14cm"""
+        Accessory Spleen
+        Splenic cyst
+        Splenic hemangioma
+        Splenic infarction
+        Gamna-Gandy nodule
+        Splenic calcification
+        Splenic injury
+        Malignant lymphoma
+        Metastatic tumor
+        polysplenia
+        asplenia
+    Kidney
+        renal cyst
+        renal stone
+        double pelvis and ureter
+        ESRD
+        CKD
+        nephritis
+        nephrocalcinosis
+        renal medullary nephrocalcinosis
+        horseshoe Kidney
+        double pelvis and ureter
+        calyceal diverticulum
+        multicystic Kidney
+        acquired cystic disease of kidney(ACDK)
+        Polycystic kidney
+        angiomyolipoma
+        renal hematoma
+        renal abscess
+        Renal infarction
+        renal sinus lipomatosis
+        renal cell carcinoma
+        pelvic tumor
+        wilm tumor
+        metastatic renal tumor
+        
+
+    Aorta
+    Prostate
+    Etc

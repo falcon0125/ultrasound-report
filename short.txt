@@ -1,0 +1,88 @@
+                                                                     
+                                                                     
+                                                                     
+                                             
+S      sono of abdomen		SAN		
+X      sono of liver, BD	LP
+L      sono of liver		LAN
+
+
+
+<liver parenchyma>
+FL     fatty liver
+LD     coarsening of liver
+FLFS   fatty liver with focal sparing
+FLFSG   fatty liver with focal sparing next to GB
+FLFSL  fatty liver with focal sparing left lobe
+SCI    liver cirrhosis + splenomegaly
+SCIA   liver cirrhosis + splenomegaly + ascites
+SCIAE  liver cirrhosis + splenomegaly + ascites + splenic vein enlargement(>14mm)
+
+
+<liver nodule>
+LC     Liver cyst
+LCs    multiple liver cyst
+
+CA     calcification
+HP     hypoechoic nodule(<1cm 時)
+HPC    hypoechoic nodule suggest CT	(>1cm 時)
+HPE    hyperechoic nodule
+
+
+HE     hemangioma
+AHE    atypical hemangioma
+
+<liver operation>
+
+CH     s/p cholecystectomy
+PC     s/p hepatectomy + cholecystectomy
+PCS    s/p hepatectomy + cholecystectomy + splenectomy
+SPC    S/P Partial resection of liver and cholecystectomy
+
+<GB>
+
+GW     GB wall thickening
+PO     GB polyp
+GS     gallstone
+CBD    CBD dilatation
+GSS    multiple gallstones
+AD     adenomyomatosis of GB
+SLU    sludge
+CH     s/p cholecystectomy
+NG     Non-visualization of gall bladder
+NFG    Small size of gallbladder due to nonfasting
+
+<pancreas>
+PP      pancreas and bowel gas.
+PANC    pancreatic cyst
+PD      pancreatic duct dilation
+<spleen>
+
+SPLM   splenomegaly
+PSP    Prominence of spleen
+SPLX   splenectomy
+ASP    ascessory spleen
+SPLC   spleen cyst
+SPLCA  spleen calcification
+
+<kidney>
+DRP    dilatation of renal pelvis
+KE     Chronic renal disease
+ER     end stage renal disease
+
+RCS    renal cyst
+RS     renal stone
+RCA    renal calcification
+
+HA     renal hamartoma
+HA2    2 HA, one on each side
+
+HYD    Mild hydronephrosis of * kidney
+
+TR     The transplanted kidney over right lower abdomen shows normal appearance.
+TL     The transplanted kidney over left lower abdomen shows normal appearance.
+
+<etc>
+AS     ascites
+PE     pleural effusion
+PC     pericardial effusion

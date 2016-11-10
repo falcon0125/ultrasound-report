@@ -28,7 +28,7 @@ HP     hypoechoic nodule(<1cm 時)
 HPC    hypoechoic nodule suggest CT	(>1cm 時)
 HPE    hyperechoic nodule
 
-
+AHE    atypical hemagioma
 HE     hemangioma
 AHE    atypical hemangioma
 
@@ -51,11 +51,13 @@ SLU    sludge
 CH     s/p cholecystectomy
 NG     Non-visualization of gall bladder
 NFG    Small size of gallbladder due to nonfasting
+PNEU    Pneumobilia
 
 <pancreas>
 PP      pancreas and bowel gas.
 PANC    pancreatic cyst
 PD      pancreatic duct dilation
+
 <spleen>
 
 SPLM   splenomegaly
@@ -69,18 +71,22 @@ SPLCA  spleen calcification
 DRP    dilatation of renal pelvis
 KE     Chronic renal disease
 ER     end stage renal disease
+PCD    polycystic reanl disease
 
 RCS    renal cyst
 RS     renal stone
+STS    Staghorn stone
 RCA    renal calcification
 
+CDSL   Calyceal diverticulum
+KHAR   angiomyolipoma
 HA     renal hamartoma
-HA2    2 HA, one on each side
 
-HYD    Mild hydronephrosis of * kidney
+HYD    hydronephrosis
 
-TR     The transplanted kidney over right lower abdomen shows normal appearance.
-TL     The transplanted kidney over left lower abdomen shows normal appearance.
+ERTK   ESRD + Kidney trasplant
+TKR     The transplanted kidney over right lower abdomen shows normal appearance.
+TKL     The transplanted kidney over left lower abdomen shows normal appearance.
 
 <etc>
 AS     ascites

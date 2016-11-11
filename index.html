@@ -58,8 +58,7 @@
       color: palevioletred;
     }
     #temp{
-      color: grey;
-      font-size:8pt;
+      font-size:10pt;
     }
   </style>
   <script>
@@ -130,7 +129,7 @@
                 });
                 // format report to within 60 charater per line
                 $("#format").click(function(){
-                      var textarea = $("#report-preview");
+                      var textarea = $("#temp");
                       var text = textarea.val()
                       var header_loc = text.search(/:/gm);
                       // header  = `imrpression :`
@@ -171,7 +170,7 @@
   </div>
   <div id="result">
     <textarea id="report-preview"></textarea>
-    <input type="button" id="to-temp" value="temp"/>
+    <input type="button" id="to-temp" value="->"/>
     <textarea id="temp"></textarea>
   </div>
   <div id="container">

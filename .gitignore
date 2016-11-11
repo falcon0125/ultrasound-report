@@ -2,5 +2,5 @@
 node_modules/
 .ipynb_checkpoints/
 dist/
-~$report.xlsx
+~$*
 .DS_store

@@ -47,6 +47,25 @@
             "type": "chrome",
             "request": "launch",
             "file": "${workspaceRoot}/index.html",
+        },{   
+            "name": "test",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/test.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole",
+            "sourceMaps": false,
+            "outDir": "${workspaceRoot}/compiled/",
         }
 
     ]

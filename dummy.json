@@ -1,0 +1,71 @@
+[{
+    "category": "header",
+    "code": null,
+    "label": "sono header",
+    "priority": 0,
+    "description": "Sonography of the abdomen was performed and showed:",
+    "impression": null
+}, {
+    "category": "condition",
+    "code": null,
+    "label": "poor cooperation",
+    "priority": 1,
+    "description": "poor cooperation",
+    "impression": null
+}, {
+    "category": "condition",
+    "code": null,
+    "label": "poor window",
+    "priority": 2,
+    "description": "poor window",
+    "impression": null
+}, {
+    "category": "liver parenchyma",
+    "code": "NL",
+    "label": "normal liver",
+    "priority": 3,
+    "description": "The liver parenchyma shows reflective pattern with increased sound attenuation without evidence of focal lesion.",
+    "impression": null
+}, {
+    "category": "liver parenchyma",
+    "code": "FL",
+    "label": "fatty liver",
+    "priority": 4,
+    "description": "The liver parenchyma shows reflective pattern with increased sound attenuation.\n",
+    "impression": "Fatty liver."
+}, {
+    "category": "liver parenchyma",
+    "code": "FLFS",
+    "label": "fatty liver with focal sparing",
+    "priority": 5,
+    "description": "The liver parenchyma shows reflective pattern with increased sound attenuation and a relative hypoechoic area over the * lobe.",
+    "impression": "A relative hypoechoic area about * mm in size is noted over the * lobe of liver.    Focal fat-sparing area is considered."
+}, {
+    "category": "liver parenchyma",
+    "code": "LD",
+    "label": "coarse liver",
+    "priority": 6,
+    "description": " The liver shows dense echopattern of the parenchyma with a cystic lesion about cm in diameter over segment of love liver.",
+    "impression": "Dense echopattern of the liver parenchyma, which might be due to corrhosis of the liver, fatty infiltration or chronic hepatitis."
+}, {
+    "category": "liver parenchyma",
+    "code": "SCI",
+    "label": "Liver cirhosis + splenomegaly",
+    "priority": 7,
+    "description": "The liver parenchyma shows coarsening of the echopattern with increased sound attenuations. The spleen shows enlargement.",
+    "impression": "Coarsening of the echopattern of liver with splenomegaly are compatible with cirrhosis of liver."
+}, {
+    "category": "liver parenchyma",
+    "code": "SCIAE",
+    "label": "Liver cirhosis + splenomegaly + splenic vein engorgement",
+    "priority": 8,
+    "description": "Coarsening of the echopattern of liver parenchyma with engorgement of splenic vein, splenomegaly and ascites are compatible with cirrhosis of liver.\n        The spleen shows enlargement engorgement of splenic vein.",
+    "impression": "The liver shows coarsening of the echopattern with enlargement without evidence of focal mass lesion."
+}, {
+    "category": "liver nodule",
+    "code": "CA",
+    "label": "liver calcification",
+    "priority": 9,
+    "description": "A calcification over right lobe.",
+    "impression": "A calcification about * mm over right lobe of liver."
+}]

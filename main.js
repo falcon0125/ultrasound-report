@@ -39,3 +39,5 @@ m = m.replace(/(.{3,50})\b/gm,'$1\n')
 
 //t = m.map(x=>text.search(x))
 console.log(m, "\n" ,text.substr(x))
+
+

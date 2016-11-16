@@ -4,7 +4,7 @@
     "isShellCommand": true,
     "tasks": [
         {
-            "args": ["js", "--out-dir", "compiled", "-w", "--source-maps"],
+            "args": ["js", "--out-dir", "build", "-w", "--source-maps"],
             "taskName": "watch",
             "suppressTaskName": true,
             "isBuildCommand": true,

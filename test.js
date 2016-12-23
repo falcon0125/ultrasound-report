@@ -18,8 +18,11 @@ String.prototype.wrap = function(tag, attrs={}){
 }
 
 for (cat of category){
-    var l  = g[cat].map(x=> `<input type="checkbox" value="${x.code}"/><label>${x.code}:${x.label}</label>`.wrap('div',{'id':'DD'}))
-    var s = `<legend>${cat}</legend>` + l.join('')
+    var l  = g[cat].map(x=> `<label><input type="checkbox" value="${x.code}"/><span>${x.code}:</span>${x.label}</label>`.wrap('div',{'id':'DD'}))
+    var s = `<legend>${cat}</legend>${l.join('')}`
     //return s.wrap('fieldset',{'id':'cat',name: cat})
     print(s.wrap('fieldset',{'id':'cat',name: cat})) 
 }
+
+
+

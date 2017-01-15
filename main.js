@@ -9,15 +9,15 @@ function search_phrase(target) {
     target = target.trim().toUpperCase();
     let l = target.split(/[\s,.]+/ig);
     let result = option_keys.filter(x => l.every(y => x.search(y) != -1))
-    let k = result.map(x => [x,option[x]])
-    k = k.sort( (m,n) => m[0].length - n[0].length)
-    return k.slice(0,10)
+    let k = result.map(x => [x, option[x]])
+    k = k.sort((m, n) => m[0].length - n[0].length)
+    return k.slice(0, 10)
 }
-output = search_phrase("pcs").map(x=>`${x[0]}\t${x[1].slice(x[1].search(/Impression(:)/)+10,x[1].search("Impression")+100)}...`)
+output = search_phrase("pcs").map(x => `${x[0]}\t${x[1].slice(x[1].search(/Impression(:)/)+10,x[1].search("Impression")+100)}...`)
 console.log(output)
 
-var text =  
-`Sonography of the abdomen was performed and showed: 
+var text =
+    `Sonography of the abdomen was performed and showed: 
 The liver parenchyma shows reflective pattern with increased sound attenuation without evidence of focal lesion.
 The gall bladder is normal in size without evidence of stones.
 The biliary tree is normal appearance without dilatation.
@@ -32,12 +32,10 @@ Harmatoma is considered.`
 
 rex = /\n/gm
 x = text.search(/impression:/igm)
-a = text.substr(0,x)
-m = a.replace(rex,' ')
-m = m.replace(/(.{3,50})\b/gm,'$1\n')
+a = text.substr(0, x)
+m = a.replace(rex, ' ')
+m = m.replace(/(.{3,50})\b/gm, '$1\n')
 
 
 //t = m.map(x=>text.search(x))
-console.log(m, "\n" ,text.substr(x))
-
-
+console.log(m, "\n", text.substr(x))

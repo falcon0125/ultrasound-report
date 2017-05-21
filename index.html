@@ -13,7 +13,7 @@
     textarea {
       width: 60em;
       height: 20em;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
       font-size: 8pt;
       padding: 3pt;
     }
@@ -133,24 +133,54 @@
       // format report to within 60 charater per line
       $("#format").click(function () {
         var textarea = $("#temp");
-        var text = textarea.val()
-        var header_loc = text.search(/:/gm);
-        // header  = `imrpression :`
-        var header = text.substr(0, header_loc + 1);
-        header += '\n\n'
-        var remain = text.substr(header_loc + 2)
-        var rex = /\n/gm;
-        var x = remain.trim().search(/impression:/igm);
-        if (x != -1) {
-          var a = remain.substr(0, x);
-        } else {
-          var a = remain;
+        var S = textarea.val()
+        re = /(sono.*):/igm;
+        m = re.exec(S);
+        description_title = m[0];
+        S = S.slice(re.lastIndex);
+        // Impression part
+        re = /impression:/igm;
+        m = re.exec(S);
+        description_content_raw = S.slice(0, m.index);
+        impression_title = m[0];
+        impression_content_raw = S.slice(re.lastIndex);
+        //print(description_title, description_content_raw,impression_title, impression_content_raw)
+
+        // description
+        //   to one line.
+        function chop(s, n, spliter) {
+            s = s.replace(/\s+/igm, " ").trim();
+            charater_number = n;
+            temp_l = s.split(/\s/igm);
+            //print(temp_l)
+            r = [];
+            k = '';
+            for (let i in temp_l) {
+                if (k.length + temp_l[i].length <= charater_number) {
+                    k += temp_l[i] + ' ';
+                } else {
+                    r.push(k + ' ');
+                    k = temp_l[i] + ' ';
+                }
+            }
+            r.push(k);
+            return r.map(x => x.trim()).join(spliter);
         }
-        var m = a.replace(rex, ' ');
-        m = m.replace(/(.{3,60})\b/gm, '$1\n');
-        m = m.replace(/^\s+/gm, '');
-        textarea.val(header + m + "\n" + remain.substr(x));
-        console.log(header);
+        description_content = chop(description_content_raw, 60, '\n');
+
+        //print(description_content)
+
+        // impression
+        impression_content_raw = impression_content_raw.trim().replace(/\s+/igm, ' ');
+        //print(impression_content_raw)
+        l = impression_content_raw.split(/\d+\.\s?/igm);
+        l = l.slice(1);
+        l = l.map(x => x.trim());
+        l = l.map(x => chop(x, 57, '\n   '));
+        impression_content = l.map((x, i) => String(i + 1) + '. ' + x).join('\n');
+        out = [description_title, description_content, impression_title, impression_content].join('\n');
+        textarea.val(out);
+        console.log(out);
       });
 
       $('#report-preview').bind('input propertychange', function () {

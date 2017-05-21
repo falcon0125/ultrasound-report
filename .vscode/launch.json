@@ -1,6 +1,17 @@
 {
     "version": "0.2.0",
     "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Yeoman generator",
+            "program": "${workspaceRoot}/node_modules/yo/lib/cli.js",
+            "args": [
+                "generator"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
         {   
             "name": "啟動",
             "type": "node",
@@ -65,7 +76,7 @@
             },
             "console": "internalConsole",
             "sourceMaps": false,
-            "outDir": "${workspaceRoot}/compiled/",
+            "outFiles": "${workspaceRoot}/compiled/",
         }
 
     ]

@@ -9,11 +9,12 @@
   <script src="./jquery-3.1.1.min.js"></script>
   <script src="./jquery-ui/jquery-ui.js"></script>
   <link href="./jquery-ui/jquery-ui.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   <style type="text/css">
     textarea {
       width: 60em;
       height: 20em;
-      font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+      font-family: 'Inconsolata', monospace;
       font-size: 8pt;
       padding: 3pt;
     }
@@ -58,9 +59,7 @@
       color: palevioletred;
     }
     
-    #temp {
-      font-size: 10pt;
-    }
+
   </style>
   <script>
     var phrases = []
@@ -75,7 +74,7 @@
       phrases.forEach(function (x) {
         return option[x[0]] = x[1];
       });
-      console.log(option_keys)
+      //console.log(option_keys)
     });
 
     $(document).ready(function () {
@@ -84,13 +83,13 @@
         var l = $("#container input:checked").map(function () {
           return this.value
         }).toArray();
-        console.log(l);
+        //console.log(l);
         $("#search-text").val(l.join(' '));
         $("#search-text").focus();
       })
       $("#to-report").click(function () {
         var r = option[$("#search-text").val()]
-        console.log($("#search-text").text())
+        //console.log($("#search-text").text())
         r = r.replace(/\*/gm, '_____')
         $("#report-preview").val(r)
       })
@@ -103,7 +102,7 @@
         var l = $("#container input:checked").map(function () {
           return this.value
         }).toArray();
-        console.log(l);
+        //console.log(l);
         $("#check-to-text").click();
       })
 
@@ -125,7 +124,7 @@
           result = result.sort(function (m, n) {
             return m.length - n.length
           });
-          console.log(result);
+          //console.log(result);
           response(result.splice(0, 10));
         },
         autofocus: true,
@@ -178,11 +177,23 @@
         l = l.map(x => x.trim());
         l = l.map(x => chop(x, 57, '\n   '));
         impression_content = l.map((x, i) => String(i + 1) + '. ' + x).join('\n');
-        out = [description_title, description_content, impression_title, impression_content].join('\n');
+        out = [description_title+'\n',description_content,'\n'+ impression_title, impression_content].join('\n');
         textarea.val(out);
-        console.log(out);
+        //console.log(out);
       });
+      var copyTextareaBtn = document.querySelector('#format');
+      copyTextareaBtn.addEventListener('click', function(event) {
+        var copyTextarea = document.querySelector('#temp');
+        copyTextarea.select();
 
+        try {
+          var successful = document.execCommand('copy');
+          var msg = successful ? 'successful' : 'unsuccessful';
+          console.log('Copying text command was ' + msg);
+        } catch (err) {
+          console.log('Oops, unable to copy');
+        }
+      });
       $('#report-preview').bind('input propertychange', function () {
         var new_text = $('#report-preview').val().replace(/\*/gm, '<span class="heightlight">*</span>')
           //$('#result p').html(new_text);
@@ -192,6 +203,8 @@
         //to temp textarea
         $('#temp').val($('#report-preview').val())
       })
+
+
     });
   </script>
   <script>

@@ -15,7 +15,7 @@
       width: 60em;
       height: 20em;
       font-family: 'Inconsolata', monospace;
-      font-size: 8pt;
+      font-size: 10pt;
       padding: 3pt;
     }
     
@@ -66,7 +66,7 @@
     var option_keys = []
     var option = {};
     $.getJSON("./phrases.json", function (data) {
-      console.log("load json");
+      console.log("load json sucess");
       phrases = data
       option_keys = data.map(function (e) {
         return e[0]
@@ -232,11 +232,11 @@
     <input type="button" id="to-report" value="to report">
     <input type="button" id="check-to-text" value="to autocomplete">
     <input type="button" id="clear-button" value="clear">
+    <input type="button" id="to-temp" value="->" />
     <input type="button" id="format" value="format">
   </div>
   <div id="result">
     <textarea id="report-preview"></textarea>
-    <input type="button" id="to-temp" value="->" />
     <textarea id="temp"></textarea>
   </div>
   <div id="container">

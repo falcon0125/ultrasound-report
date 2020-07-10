@@ -199,13 +199,6 @@ window.jQuery || document.write('<script src="/jquery.min.js"><\/script>')
         out = [description_title+'\n',description_content,'\n'+ impression_title, impression_content].join('\n');
         textarea.val(out);
         //console.log(out);
-
-        gtag('send', {
-                hitType: 'event',
-                eventCategory: 'format',
-                eventAction: 'click',
-            });
-
       });
       var copyTextareaBtn = document.querySelector('#format');
       copyTextareaBtn.addEventListener('click', function(event) {
@@ -219,6 +212,10 @@ window.jQuery || document.write('<script src="/jquery.min.js"><\/script>')
         } catch (err) {
           console.log('Oops, unable to copy');
         }
+                gtag('event', 'format',{
+                event_callback: function(){console.log("ga format")}
+                });
+
       });
       $('#report-preview').bind('input propertychange', function () {
         var new_text = $('#report-preview').val().replace(/\*/gm, '<span class="heightlight">*</span>')
@@ -228,12 +225,10 @@ window.jQuery || document.write('<script src="/jquery.min.js"><\/script>')
       $("#to-temp").click(function () {
         //to temp textarea
         $('#temp').val($('#report-preview').val())
-
-        gtag('send', {
-                hitType: 'event',
-                eventCategory: 'to-temp',
-                eventAction: 'click',
-            });
+        gtag('event', 'to-temp',{
+                'text': $('#report-preview').val(),
+                event_callback: function(){console.log("ga to temp")}
+                });
       })
 
 

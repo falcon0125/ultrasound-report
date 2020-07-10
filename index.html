@@ -108,7 +108,7 @@ window.jQuery || document.write('<script src="/jquery.min.js"><\/script>')
         r = r.replace(/\*/gm, '_____')
         $("#report-preview").val(r)
         gtag('event', 'search',{
-                'search_term':r,
+                'search_term':$("#search-text").val(),
                 event_callback: function(){console.log("ga search")}
                 });
       })

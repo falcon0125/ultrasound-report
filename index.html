@@ -197,6 +197,13 @@
         out = [description_title+'\n',description_content,'\n'+ impression_title, impression_content].join('\n');
         textarea.val(out);
         //console.log(out);
+
+        gtag('send', {
+                hitType: 'event',
+                eventCategory: 'format',
+                eventAction: 'click',
+            });
+
       });
       var copyTextareaBtn = document.querySelector('#format');
       copyTextareaBtn.addEventListener('click', function(event) {
@@ -219,6 +226,12 @@
       $("#to-temp").click(function () {
         //to temp textarea
         $('#temp').val($('#report-preview').val())
+
+        gtag('send', {
+                hitType: 'event',
+                eventCategory: 'to-temp',
+                eventAction: 'click',
+            });
       })
 
 

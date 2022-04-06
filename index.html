@@ -80,7 +80,7 @@ window.jQuery || document.write('<script src="/jquery.min.js"><\/script>')
     var phrases = []
     var option_keys = []
     var option = {};
-    $.getJSON("./phrases.json", function (data) {
+    $.getJSON("./phrases2022.json", function (data) {
       console.log("load json sucess");
       phrases = data
       option_keys = data.map(function (e) {
